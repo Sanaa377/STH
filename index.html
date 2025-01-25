@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleO.css">
+    
+</head>
+
+
+<body>
+    <nav class="main-navigation">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="career.html" class="nav-link">Career</a></li>
+            <li><a href="stories.html" class="nav-link">Stories</a></li>
+            <li><a href="#" class="nav-link" onclick="openLoginModal()">Login</a></li>
+            <li><a href="#" class="nav-link" onclick="openSignupModal()">Signup</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="loginModal" class="login-modal">
+        <div class="login-content">
+            <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form class="login-form" id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="login-modal">
+        <div class="login-content">
+            <span class="close-modal" onclick="closeSignupModal()">&times;</span>
+            <h2>Sign Up</h2>
+            <form class="login-form" id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <section class="header">
+        <div class="test-box">
+            <a href="index.html"><img src="images/logo.png" alt="CS Roadmap Logo"></a>
+            <h1>From Hello World to Tech Pro: Your CS Guide</h1>
+            <p>Unleash your potential and explore the infinite paths of computer science. Dive into skills, courses, and careers that redefine innovation and shape the world of tomorrow.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About CS Roadmap</h2>
+            <p>Your comprehensive guide to becoming a successful computer science professional. Follow our structured learning path designed by industry experts.</p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <div class="container">
+            <h2>Core Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="icon">📚</div>
+                    <h3>Programming Fundamentals</h3>
+                    <p>Learn core programming concepts and syntax</p>
+                </div>
+                <div class="course-card">
+                    <div class="icon">🔍</div>
+                    <h3>Data Structures</h3>
+                    <p>Master essential data structures and algorithms</p>
+                </div>
+                <div class="course-card">
+                    <div class="icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Build modern web applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Essential Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Problem Solving</div>
+                <div class="skill-card">Algorithm Design</div>
+                <div class="skill-card">Object-Oriented Programming</div>
+                <div class="skill-card">Database Management</div>
+                <div class="skill-card">Version Control</div>
+                <div class="skill-card">Software Architecture</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers">
+        <div class="container">
+            <h2>Career Opportunities</h2>
+            <div class="careers-grid">
+                <div class="career-card">
+                    <div class="icon">💼</div>
+                    <h3>Software Engineer</h3>
+                    <p>Design and build software applications</p>
+                </div>
+                <div class="career-card">
+                    <div class="icon">🔧</div>
+                    <h3>DevOps Engineer</h3>
+                    <p>Manage deployment and infrastructure</p>
+                </div>
+                <div class="career-card">
+                    <div class="icon">📊</div>
+                    <h3>Data Scientist</h3>
+                    <p>Analyze and interpret complex data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <div class="resources-list">
+                <a href="#" class="resource-card">
+                    <div class="icon">📖</div>
+                    <span>LeetCode</span>
+                </a>
+                <a href="#" class="resource-card">
+                    <div class="icon">🐱</div>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="resource-card">
+                    <div class="icon">❓</div>
+                    <span>Stack Overflow</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: contact@csroadmap.edu</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CS Roadmap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <h1>Welcome to the Professional Computer Science Roadmap</h1>
+    <p>Explore everything you need to know about a career in computer science: skills, courses, and career paths!</p>
+   
+
+
+
+
+
+
+
+
+    <div id="chatbot-container">
+        <div id="chat-header">Ask Me Anything</div>
+        <div id="chat-body">
+          <div class="bot-message">Hi! What do you want to learn about? Choose an option:</div>
+          <div class="options">
+            <button class="chat-option" onclick="provideResponse('AI Resources')">AI Resources</button>
+            <button class="chat-option" onclick="provideResponse('Programming Basics')">Programming Basics</button>
+            <button class="chat-option" onclick="provideResponse('Career Tips')">Career Tips</button>
+          </div>
+          <div id="chat-content"></div>
+        </div>
+        <div id="chat-footer">
+          <input type="text" id="user-input" placeholder="Type your question..." disabled />
+          <button id="send-btn" disabled>Send</button>
+        </div>
+      </div>
+<script>
+    function provideResponse(option) {
+  const chatContent = document.getElementById("chat-content");
+  let response = "";
+
+  if (option === "AI Resources") {
+    response = `
+      <div class="bot-message">
+        Here are some great AI resources:
+        <ul>
+          <li><a href="https://www.deeplearning.ai/" target="_blank">DeepLearning.ai</a></li>
+          <li><a href="https://www.fast.ai/" target="_blank">Fast.ai</a></li>
+          <li><a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">Coursera AI Courses</a></li>
+        </ul>
+      </div>`;
+  } else if (option === "Programming Basics") {
+    response = `
+      <div class="bot-message">
+        Learn programming basics:
+        <ul>
+          <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+          <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+          <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+        </ul>
+      </div>`;
+  } else if (option === "Career Tips") {
+    response = `
+      <div class="bot-message">
+        Here are some career tips:
+        <ul>
+          <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn Career Tips</a></li>
+          <li><a href="https://www.indeed.com/career-advice" target="_blank">Indeed Career Advice</a></li>
+          <li><a href="https://www.themuse.com/advice" target="_blank">The Muse</a></li>
+        </ul>
+      </div>`;
+  }
+
+  chatContent.innerHTML += response;
+}
+function openLoginModal() {
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        function openSignupModal() {
+            document.getElementById('signupModal').style.display = 'block';
+        }
+
+        function closeSignupModal() {
+            document.getElementById('signupModal').style.display = 'none';
+        }
+
+        function switchToSignup() {
+            closeLoginModal();
+            openSignupModal();
+        }
+
+        function switchToLogin() {
+            closeSignupModal();
+            openLoginModal();
+        }
+
+        // Form submission handling (client-side only, you'll need backend integration)
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality will be implemented with backend integration');
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Signup functionality will be implemented with backend integration');
+        });
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            if (event.target == loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (event.target == signupModal) {
+                signupModal.style.display = 'none';
+            }
+        }
+    </script>
+</script>      
+</body>
+</html>

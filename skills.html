@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Skills</title>
+    <link rel="stylesheet"href="skills.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Computer Science</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="skills.html" class="active">Skills</a>
+                <a href="career.html">Career</a>
+                <a href="stories.html">Stories</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Technical Skills</h1>
+            <p>Essential competencies and expertise in computer science</p>
+        </header>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="programming.png" alt="Programming Languages" class="skill-image"/>
+                <div class="skill-content">
+                    <h2 class="skill-title">Programming Languages</h2>
+                    <p class="skill-description">Advanced understanding of multiple programming paradigms including object-oriented, functional, and procedural programming.</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <img src="machine.png" alt="Data Science" class="skill-image"/>
+                <div class="skill-content">
+                    <h2 class="skill-title">Data Science</h2>
+                    <p class="skill-description">Expertise in data analysis, statistical modeling, and implementation of machine learning algorithms.</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <img src="AI.png" alt="Artificial Intelligence" class="skill-image"/>
+                <div class="skill-content">
+                    <h2 class="skill-title">Artificial Intelligence</h2>
+                    <p class="skill-description">Deep understanding of AI principles, neural networks, and practical implementation of machine learning systems.</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <img src="cyber.png" alt="Cybersecurity" class="skill-image"/>
+                <div class="skill-content">
+                    <h2 class="skill-title">Cybersecurity</h2>
+                    <p class="skill-description">Strong foundation in network security, cryptography, and secure system design methodologies.</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <img src="solve.png" alt="Problem Solving" class="skill-image"/>
+                <div class="skill-content">
+                    <h2 class="skill-title">Problem Solving</h2>
+                    <p class="skill-description">Advanced capabilities in algorithm design and optimization techniques for complex computational challenges.</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-progress="95"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <img src="team2.png" alt="Team Collaboration" class="skill-image"/>
+                <div class="skill-content">
+                    <h2 class="skill-title">Team Collaboration</h2>
+                    <p class="skill-description">Excellence in project coordination, version control systems, and collaborative development.</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.skill-card');
+            
+            cards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (cardPosition < screenPosition) {
+                    card.classList.add('visible');
+                    const progress = card.querySelector('.progress-bar');
+                    const progressValue = progress.getAttribute('data-progress');
+                    progress.style.width = progressValue + '%';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
