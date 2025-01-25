@@ -151,7 +151,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation */
+
 .main-navigation {
   background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
   padding: 1rem 0;
@@ -201,7 +201,7 @@ body {
   width: 100%;
 }
 
-/* Hero Section */
+
 .header {
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('ok.png');
@@ -263,7 +263,7 @@ section h2::after {
   background: #3498db;
 }
 
-/* Cards */
+/*cards*/
 .courses-grid, .careers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -331,7 +331,7 @@ section h2::after {
   transform: translateY(-5px);
 }
 
-/* Footer */
+/* Foote */
 .footer {
   background: #2c3e50;
   color: white;
@@ -372,7 +372,7 @@ section h2::after {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Mobile Responsive */
+/* Mobile */
 @media (max-width: 768px) {
   .nav-list {
       flex-direction: column;
